@@ -13,8 +13,13 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v3
       - name: "Run ShellCheck"
+        id: run-shellcheck
         uses: ludeeus/action-shellcheck@master
         with:
           ignore_paths: >-
             Dockerfile.ubuntu
             Dockerfile.ubuntu-22.04
+      - uses: sarisia/actions-status-discord@v1
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
