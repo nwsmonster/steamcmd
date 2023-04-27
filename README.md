@@ -4,7 +4,7 @@
 
 # SteamCMD
 
-> **NOTE:** This is a fork for managing my own private servers. You probably want to use/reference [nwsmonster/steamcmd](https://github.com/nwsmonster/steamcmd) instead.
+> **NOTE:** This is a fork for managing my own private servers. You probably want to use/reference [nhalase/steamcmd](https://github.com/nhalase/steamcmd) instead.
 
 A Docker image for running the linux SteamCMD binary.
 
