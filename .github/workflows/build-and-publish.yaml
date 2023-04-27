@@ -14,6 +14,7 @@ jobs:
   check:
     name: "Quality Check"
     uses: ./.github/workflows/check.yaml
+    secrets: inherit
   build-and-publish-ubuntu:
     name: "Build and publish ubuntu version-specific images"
     needs:
