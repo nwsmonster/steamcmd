@@ -37,4 +37,4 @@ jobs:
         if: always()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          title: "Build and publish ubuntu images"
+          title: "Build and Publish ubuntu Tags"
