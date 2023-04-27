@@ -22,10 +22,10 @@ jobs:
       - name: "Build images"
         run: |
           version_label=$GITHUB_REF_NAME-$(date '+%Y%m%d')
-          docker build --file "$GITHUB_WORKSPACE/Dockerfile.ubuntu-22.04" --target steamcmd --tag nhalase/steamcmd:ubuntu-22.04 --label "version=$version_label" --label "github.ref=$GITHUB_REF" --label "github.runid=$GITHUB_RUN_ID" "$GITHUB_WORKSPACE"
+          docker build --file "$GITHUB_WORKSPACE/Dockerfile.ubuntu-22.04" --target steamcmd --tag nwsmonster/steamcmd:ubuntu-22.04 --label "version=$version_label" --label "github.ref=$GITHUB_REF" --label "github.runid=$GITHUB_RUN_ID" "$GITHUB_WORKSPACE"
       - name: "Test images"
         run: |
-          docker run --rm nhalase/steamcmd:ubuntu-22.04
+          docker run --rm nwsmonster/steamcmd:ubuntu-22.04
       - name: "Publish images"
         run: |
-          docker push nhalase/steamcmd:ubuntu-22.04
+          docker push nwsmonster/steamcmd:ubuntu-22.04

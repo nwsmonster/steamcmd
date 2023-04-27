@@ -1,8 +1,10 @@
-[![Build Status](https://github.com/nhalase/steamcmd/actions/workflows/build-and-publish.yaml/badge.svg)](https://github.com/nhalase/steamcmd/actions)
-[![Docker Pulls](https://img.shields.io/docker/pulls/nhalase/steamcmd.svg)](https://hub.docker.com/r/nhalase/steamcmd)
-[![Image Size](https://img.shields.io/docker/image-size/nhalase/steamcmd/latest.svg)](https://hub.docker.com/r/nhalase/steamcmd)
+[![Build Status](https://github.com/nwsmonster/steamcmd/actions/workflows/build-and-publish.yaml/badge.svg)](https://github.com/nwsmonster/steamcmd/actions)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nwsmonster/steamcmd.svg)](https://hub.docker.com/r/nwsmonster/steamcmd)
+[![Image Size](https://img.shields.io/docker/image-size/nwsmonster/steamcmd/latest.svg)](https://hub.docker.com/r/nwsmonster/steamcmd)
 
 # SteamCMD
+
+> **NOTE:** This is a fork for managing my own private servers. You probably want to use/reference [nwsmonster/steamcmd](https://github.com/nwsmonster/steamcmd) instead.
 
 A Docker image for running the linux SteamCMD binary.
 
@@ -30,13 +32,13 @@ libc-dev
 
 ```bash
 # pull latest image
-docker pull nhalase/steamcmd:latest
+docker pull nwsmonster/steamcmd:latest
 
 # download/update CS:GO
-docker run -it nhalase/steamcmd:latest +login anonymous +app_update 740 +quit
+docker run -it nwsmonster/steamcmd:latest +login anonymous +app_update 740 +quit
 
 # use interactively
-docker run -it --rm --entrypoint /bin/bash nhalase/steamcmd:latest
+docker run -it --rm --entrypoint /bin/bash nwsmonster/steamcmd:latest
 ```
 
 ## Environment Variables
